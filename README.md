@@ -11,3 +11,14 @@ A lightweight Bash script that parses vulnerability data from Trivy JSON scan re
 # Dependencies
 - Bash
 - jq installed
+
+# Installation
+    -> git clone https://github.com/TheDarkFever/Trivy_json_2_csv.git
+    -> chmod +x trivy_json_2_csv.sh
+    -> sudo mv trivy_json_2_csv.sh /usr/bin (Making program run globally)
+
+# Usage
+  bash trivy_json_2_csv.sh <input_json_file> <output_csv_file>
+
+# Reference
+ https://github.com/aquasecurity/trivy
