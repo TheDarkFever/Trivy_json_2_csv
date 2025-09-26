@@ -8,4 +8,6 @@ A lightweight Bash script that parses vulnerability data from Trivy JSON scan re
 - Includes argument validation and error handling
 - Ideal for CI pipelines, audit reports, and vulnerability dashboards
 
-  
+# Dependencies
+- Bash
+- jq installed
