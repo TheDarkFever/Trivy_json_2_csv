@@ -1,24 +1,38 @@
-# Trivy_json_2_csv
-A lightweight Bash script that parses vulnerability data from Trivy JSON scan reports and exports it into a clean, structured CSV file for easier analysis, reporting, or integration with other tools.
+# Trivy JSON to CSV
 
-# Features
-- Converts Trivy JSON output into readable CSV format
-- Extracts key fields: Target, Type, CVE ID, Package, Version, Severity, Description, and Reference URL
-- Handles missing fields gracefully
-- Includes argument validation and error handling
-- Ideal for CI pipelines, audit reports, and vulnerability dashboards
+A lightweight Bash-based toolkit that converts **Trivy vulnerability scan results**
+into **CSV format**, with support for:
 
-# Dependencies
-- Bash
-- jq installed
+- JSON → CSV conversion
+- Single container image scanning
+- Bulk container image scanning from a list
 
-# Installation
-    -> git clone https://github.com/TheDarkFever/Trivy_json_2_csv.git
-    -> chmod +x trivy_json_2_csv.sh
-    -> sudo mv trivy_json_2_csv.sh /usr/bin (Making program run globally)
+Designed for **security engineers, pentesters, and DevSecOps teams** who need
+structured vulnerability data for reporting, audits, and automation.
 
-# Usage
-  bash trivy_json_2_csv.sh <input_json_file> <output_csv_file>
+---
 
-# Reference
- https://github.com/aquasecurity/trivy
+## ✨ Features
+
+- Convert Trivy JSON reports to clean CSV
+- Scan a single Docker image and export results to CSV
+- Bulk scan multiple images from a file
+- Graceful handling of missing fields
+- Minimal dependencies (Bash, jq, Trivy)
+- CI/CD and audit-friendly output
+
+---
+
+## 📁 Repository Structure
+
+```text
+.
+├── bin/
+│   ├── trivy-json-2-csv.sh      # Convert Trivy JSON → CSV
+│   ├── trivy-scan-image.sh     # Scan a single image → CSV
+│   └── trivy-scan-bulk.sh      # Scan multiple images → CSV
+├── examples/
+│   └── images.txt              # Sample image list
+├── README.md
+├── LICENSE
+└── .gitignore
